@@ -40,9 +40,9 @@ func (c *UsageLimitsChecker) CheckUsageLimits(token types.TokenInfo) (*types.Usa
 		return nil, fmt.Errorf("创建使用限制检查请求失败: %v", err)
 	}
 
-	// 设置请求头 (严格按照token.md中的示例)
-	req.Header.Set("x-amz-user-agent", "aws-sdk-js/1.0.0 KiroIDE-0.2.13-66c23a8c5d15afabec89ef9954ef52a119f10d369df04d548fc6c1eac694b0d1")
-	req.Header.Set("user-agent", "aws-sdk-js/1.0.0 ua/2.1 os/darwin#24.6.0 lang/js md/nodejs#20.16.0 api/codewhispererruntime#1.0.0 m/E KiroIDE-0.2.13-66c23a8c5d15afabec89ef9954ef52a119f10d369df04d548fc6c1eac694b0d1")
+	// 设置请求头
+	req.Header.Set("x-amz-user-agent", "aws-sdk-js/3.738.0 ua/2.1 os/macos#14.0.0 lang/js md/nodejs#20.16.0 api/codewhispererruntime#3.738.0")
+	req.Header.Set("user-agent", "aws-sdk-js/3.738.0 ua/2.1 os/macos#14.0.0 lang/js md/nodejs#20.16.0 api/codewhispererruntime#3.738.0")
 	req.Header.Set("host", "codewhisperer.us-east-1.amazonaws.com")
 	req.Header.Set("amz-sdk-invocation-id", generateInvocationID())
 	req.Header.Set("amz-sdk-request", "attempt=1; max=1")
